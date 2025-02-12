@@ -6,7 +6,7 @@ pipeline {
         string(name: 'GIT_CONTEXT', defaultValue: 'git:github.com/Srinadhgoud/test.git#refs/heads/main', description: 'Enter the git context')
         string(name: 'REGISTRY_USERNAME', defaultValue: 'sahithiperka', description: 'Enter the registry username')
         string(name: 'IMAGE_NAME', defaultValue: 'test2', description: 'Enter the image name')
-        string(name: 'TAG_NAME', defaultValue: 't1', description: 'Enter the tag name')
+        string(name: 'TAG_NAME', defaultValue: 'T1', description: 'Enter the tag name')
     }
 
     environment {
