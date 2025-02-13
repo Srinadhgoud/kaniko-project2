@@ -3,10 +3,10 @@ pipeline {
 
     parameters {
         string(name: 'NAMESPACE', defaultValue: 'sandbox', description: 'Enter the namespace')
-        string(name: 'GIT_CONTEXT', defaultValue: 'git:github.com/Srinadhgoud/test.git#refs/heads/main', description: 'Enter the git context')
+        string(name: 'GIT_CONTEXT', defaultValue: 'git:github.com/Srinadhgoud/test2.git#refs/heads/main', description: 'Enter the git context')
         string(name: 'REGISTRY_USERNAME', defaultValue: 'sahithiperka', description: 'Enter the registry username')
         string(name: 'IMAGE_NAME', defaultValue: 'test2', description: 'Enter the image name')
-        string(name: 'TAG_NAME', defaultValue: 'T1', description: 'Enter the tag name')
+        string(name: 'TAG_NAME', defaultValue: 's1', description: 'Enter the tag name')
     }
 
     environment {
@@ -34,7 +34,7 @@ metadata:
 spec:
   containers:
   - name: ${commitId}
-    image: gcr.io/kaniko-project/executor:v1.22.0-debug
+    image: gcr.io/kaniko-project/executor:v1.23.1
     args:
     - "--dockerfile=Dockerfile"
     - "--context=${params.GIT_CONTEXT}"
